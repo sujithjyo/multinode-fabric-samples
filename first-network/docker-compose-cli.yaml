@@ -94,11 +94,3 @@ services:
       # - peer1.org2.example.com
     networks:
       - byfn
-    extra_hosts:
-      - "cli:54.147.152.101"
-      - "ca.example.com:54.147.152.101"
-      - "orderer.example.com:54.147.152.101"
-      - "peer0.org1.example.com:54.173.66.202"
-      - "peer1.org1.example.com:54.173.66.202"
-      - "peer0.org2.example.com:34.201.66.109"
-      - "peer1.org2.example.com:54.34.201.66.109"

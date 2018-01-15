@@ -2,9 +2,7 @@
 #
 # SPDX-License-Identifier: Apache-2.0
 #
-# Shalice-cli-ca-order 54.147.152.101
-# Sujith-Org1 54.173.66.202
-# Bimal-Org2 34.201.66.109
+
 
 version: '2'
 
@@ -23,14 +21,7 @@ services:
     volumes:
       - ./crypto-config/peerOrganizations/org1.example.com/ca/:/etc/hyperledger/fabric-ca-server-config
     container_name: ca.example.com
-    extra_hosts:
-      - "cli:54.147.152.101"
-      - "ca.example.com:54.147.152.101"
-      - "orderer.example.com:54.147.152.101"
-      - "peer0.org1.example.com:54.173.66.202"
-      - "peer1.org1.example.com:54.173.66.202"
-      - "peer0.org2.example.com:34.201.66.109"
-      - "peer1.org2.example.com:54.34.201.66.109"
+
 
   orderer.example.com:
     container_name: orderer.example.com
@@ -55,14 +46,7 @@ services:
     - ../crypto-config/ordererOrganizations/example.com/orderers/orderer.example.com/tls/:/var/hyperledger/orderer/tls
     ports:
       - 7050:7050
-    extra_hosts:
-      - "cli:54.147.152.101"
-      - "ca.example.com:54.147.152.101"
-      - "orderer.example.com:54.147.152.101"
-      - "peer0.org1.example.com:54.173.66.202"
-      - "peer1.org1.example.com:54.173.66.202"
-      - "peer0.org2.example.com:34.201.66.109"
-      - "peer1.org2.example.com:54.34.201.66.109"
+
 
   peer0.org1.example.com:
     container_name: peer0.org1.example.com
@@ -81,14 +65,7 @@ services:
     ports:
       - 7051:7051
       - 7053:7053
-    extra_hosts:
-      - "cli:54.147.152.101"
-      - "ca.example.com:54.147.152.101"
-      - "orderer.example.com:54.147.152.101"
-      - "peer0.org1.example.com:54.173.66.202"
-      - "peer1.org1.example.com:54.173.66.202"
-      - "peer0.org2.example.com:34.201.66.109"
-      - "peer1.org2.example.com:54.34.201.66.109"
+
 
   peer1.org1.example.com:
     container_name: peer1.org1.example.com
@@ -109,14 +86,7 @@ services:
     ports:
       - 8051:7051
       - 8053:7053
-    extra_hosts:
-      - "cli:54.147.152.101"
-      - "ca.example.com:54.147.152.101"
-      - "orderer.example.com:54.147.152.101"
-      - "peer0.org1.example.com:54.173.66.202"
-      - "peer1.org1.example.com:54.173.66.202"
-      - "peer0.org2.example.com:34.201.66.109"
-      - "peer1.org2.example.com:54.34.201.66.109"
+
 
   peer0.org2.example.com:
     container_name: peer0.org2.example.com
@@ -136,14 +106,7 @@ services:
     ports:
       - 9051:7051
       - 9053:7053
-    extra_hosts:
-      - "cli:54.147.152.101"
-      - "ca.example.com:54.147.152.101"
-      - "orderer.example.com:54.147.152.101"
-      - "peer0.org1.example.com:54.173.66.202"
-      - "peer1.org1.example.com:54.173.66.202"
-      - "peer0.org2.example.com:34.201.66.109"
-      - "peer1.org2.example.com:54.34.201.66.109"
+
 
   peer1.org2.example.com:
     container_name: peer1.org2.example.com
@@ -163,11 +126,3 @@ services:
     ports:
       - 10051:7051
       - 10053:7053
-    extra_hosts:
-      - "cli:54.147.152.101"
-      - "ca.example.com:54.147.152.101"
-      - "orderer.example.com:54.147.152.101"
-      - "peer0.org1.example.com:54.173.66.202"
-      - "peer1.org1.example.com:54.173.66.202"
-      - "peer0.org2.example.com:34.201.66.109"
-      - "peer1.org2.example.com:54.34.201.66.109"
